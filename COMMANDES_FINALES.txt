@@ -1,0 +1,45 @@
+🚀 COMMANDES POUR DÉPLOYER SUR GITHUB
+=====================================
+
+✅ Tout est prêt ! Il ne reste plus qu'à pousser le code.
+
+📋 COPIEZ-COLLEZ CES COMMANDES DANS VOTRE TERMINAL :
+
+cd "/Users/alvinkuyo/Downloads/Mentality copie/mentality-web"
+git push -u origin main
+
+⚠️ GitHub va vous demander vos identifiants :
+   - Username: votre username GitHub
+   - Password: utilisez un PERSONAL ACCESS TOKEN (pas votre mot de passe !)
+
+💡 Si vous n'avez pas de token, créez-en un rapidement :
+   1. Allez sur : https://github.com/settings/tokens
+   2. Cliquez sur "Generate new token (classic)"
+   3. Name : mentrality-deploy
+   4. Scope : Cochez "repo" (toutes les sous-cases)
+   5. Generate token
+   6. COPIEZ LE TOKEN et utilisez-le comme mot de passe
+
+📊 APRÈS LE PUSH :
+
+1️⃣  Activez GitHub Pages :
+    👉 https://github.com/alvinkuyo/mentrality/settings/pages
+    Source : "GitHub Actions"
+    Save
+
+2️⃣  Attendez 2-3 minutes pour le déploiement
+
+3️⃣  Votre site sera disponible sur :
+    🌐 https://alvinkuyo.github.io/mentrality/
+
+═══════════════════════════════════════════════════════════
+
+📁 STRUCTURE DU PROJET :
+
+✅ Git configuré avec 3 commits
+✅ Remote : https://github.com/alvinkuyo/mentrality.git
+✅ vite.config.ts configuré pour base: '/mentrality/'
+✅ GitHub Actions workflow créé (.github/workflows/deploy.yml)
+✅ Application complète prête à déployer
+
+═══════════════════════════════════════════════════════════
