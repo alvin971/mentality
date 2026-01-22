@@ -5,6 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/mentality-web/', // Pour GitHub Pages
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
