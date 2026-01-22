@@ -1,0 +1,469 @@
+/**
+ * Styles globaux de l'application Mentality
+ *
+ * Reproduction du thème Material Design 3 de l'app Flutter
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Couleurs primaires */
+  --primary: #6366F1;
+  --primary-light: #818CF8;
+  --primary-dark: #4F46E5;
+  --primary-container: #E0E7FF;
+
+  /* Couleurs secondaires */
+  --secondary: #06B6D4;
+  --secondary-light: #22D3EE;
+  --secondary-dark: #0891B2;
+  --secondary-container: #CFFAFE;
+
+  /* Couleurs tertiaires */
+  --tertiary: #EC4899;
+  --tertiary-light: #F472B6;
+  --tertiary-dark: #DB2777;
+
+  /* Feedback */
+  --success: #10B981;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+
+  /* Neutres */
+  --white: #FFFFFF;
+  --black: #000000;
+  --grey-50: #F9FAFB;
+  --grey-100: #F3F4F6;
+  --grey-200: #E5E7EB;
+  --grey-300: #D1D5DB;
+  --grey-400: #9CA3AF;
+  --grey-500: #6B7280;
+  --grey-600: #4B5563;
+  --grey-700: #374151;
+  --grey-800: #1F2937;
+  --grey-900: #111827;
+
+  /* Surface */
+  --background: #FAFAFA;
+  --surface: #FFFFFF;
+  --surface-variant: #F3F4F6;
+
+  /* Indices cognitifs */
+  --index-vci: #8B5CF6;
+  --index-vsi: #06B6D4;
+  --index-fri: #6366F1;
+  --index-wmi: #10B981;
+  --index-psi: #F59E0B;
+  --index-fsiq: #7C3AED;
+
+  /* Dimensions */
+  --border-radius: 16px;
+  --border-radius-small: 12px;
+  --border-radius-large: 24px;
+
+  --padding: 24px;
+  --padding-small: 16px;
+  --padding-large: 32px;
+
+  --spacing: 16px;
+  --spacing-small: 8px;
+  --spacing-large: 24px;
+
+  /* Typographie */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+  /* Animations */
+  --transition-short: 200ms ease-in-out;
+  --transition-medium: 400ms ease-in-out;
+  --transition-long: 600ms ease-in-out;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--grey-900);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typographie - Material Design 3 */
+
+.display-large {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--grey-900);
+}
+
+.display-medium {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--grey-900);
+}
+
+.display-small {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--grey-900);
+}
+
+.headline-large {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--grey-900);
+}
+
+.headline-medium {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--grey-900);
+}
+
+.headline-small {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--grey-900);
+}
+
+.title-large {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--grey-900);
+}
+
+.title-medium {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--grey-900);
+}
+
+.title-small {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--grey-900);
+}
+
+.body-large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-700);
+}
+
+.body-medium {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-700);
+}
+
+.body-small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-600);
+}
+
+.label-large {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--grey-900);
+}
+
+.label-medium {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--grey-700);
+}
+
+.label-small {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--grey-600);
+}
+
+/* Boutons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-short);
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outlined:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 8px 16px;
+}
+
+.btn-text:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* Cartes */
+
+.card {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--grey-200);
+  padding: var(--padding);
+  transition: all var(--transition-short);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:active {
+  transform: translateY(0);
+}
+
+/* Container */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--padding);
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--padding);
+}
+
+/* Gradient backgrounds */
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, var(--success) 0%, #34D399 100%);
+}
+
+.gradient-preschool {
+  background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
+}
+
+/* Utilitaires */
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-info {
+  color: var(--info);
+}
+
+.mt-1 { margin-top: var(--spacing-small); }
+.mt-2 { margin-top: var(--spacing); }
+.mt-3 { margin-top: var(--spacing-large); }
+.mt-4 { margin-top: 32px; }
+
+.mb-1 { margin-bottom: var(--spacing-small); }
+.mb-2 { margin-bottom: var(--spacing); }
+.mb-3 { margin-bottom: var(--spacing-large); }
+.mb-4 { margin-bottom: 32px; }
+
+.p-1 { padding: var(--spacing-small); }
+.p-2 { padding: var(--spacing); }
+.p-3 { padding: var(--spacing-large); }
+.p-4 { padding: 32px; }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 { gap: var(--spacing-small); }
+.gap-2 { gap: var(--spacing); }
+.gap-3 { gap: var(--spacing-large); }
+.gap-4 { gap: 32px; }
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-medium);
+}
+
+.slide-in-up {
+  animation: slideInUp var(--transition-medium);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--padding-small);
+  }
+
+  .display-large {
+    font-size: 28px;
+  }
+
+  .display-medium {
+    font-size: 24px;
+  }
+
+  .headline-large {
+    font-size: 20px;
+  }
+}
