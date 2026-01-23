@@ -1,0 +1,262 @@
+/**
+ * Styles pour AssessmentIntroPage
+ * Reproduction exacte de lib/main.dart lignes 647-1031
+ */
+
+.assessment-intro-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+/* AppBar */
+.app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--grey-900);
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-bar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-900);
+  margin: 0;
+}
+
+/* Main Content */
+.assessment-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Illustration Circle */
+.illustration-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: rgba(99, 102, 241, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+}
+
+/* Title Section */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--grey-900);
+  text-align: left;
+  margin: 0 0 16px 0;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-700);
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+/* Domain Tiles */
+.domain-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.domain-tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.domain-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.domain-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-900);
+  line-height: 1.6;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid;
+  margin-bottom: 16px;
+}
+
+.info-box svg {
+  flex-shrink: 0;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Gradient Border Button (TEST COMPLET) */
+.gradient-border-button {
+  padding: 4px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.complete-test-button {
+  width: 100%;
+  height: 72px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-short);
+  padding: 16px 24px;
+}
+
+.complete-test-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.complete-test-button:active {
+  transform: translateY(0);
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.button-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.button-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+/* Divider Section */
+.divider-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--grey-300);
+}
+
+.divider-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey-600);
+  white-space: nowrap;
+}
+
+/* Individual Test Buttons */
+.individual-tests {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.test-button {
+  width: 100%;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-short);
+  text-align: left;
+}
+
+.test-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.test-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .illustration-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+
+  .illustration-circle svg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .complete-test-button {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .button-content {
+    align-items: center;
+  }
+}
