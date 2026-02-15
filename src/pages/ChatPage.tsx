@@ -1,9 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AppColors } from '../styles/AppColors';
 
 const ChatPage: React.FC = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="fade-in" style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
