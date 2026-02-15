@@ -7,50 +7,13 @@ const ChatPage: React.FC = () => {
 
   return (
     <div className="fade-in" style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Header */}
-      <div
-        style={{
-          background: AppColors.primaryGradient(),
-          color: 'white',
-          padding: '20px 24px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <button
-            onClick={() => navigate('/home')}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: 'white',
-              cursor: 'pointer',
-              fontSize: '24px',
-            }}
-          >
-            ←
-          </button>
-          <div>
-            <h2 className="title-large" style={{ color: 'white', margin: 0 }}>
-              Mentality Assistant
-            </h2>
-            <p className="body-small" style={{ color: 'rgba(255,255,255,0.9)', margin: 0 }}>
-              Posez vos questions sur les tests cognitifs
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Messages area */}
+      {/* Messages area - vide au départ */}
       <div style={{ flex: 1, padding: '24px', overflow: 'auto', backgroundColor: 'var(--grey-50)' }}>
-        <div className="text-center" style={{ paddingTop: '40px' }}>
-          <div style={{ fontSize: '48px', marginBottom: '16px' }}>🤖</div>
-          <h3 className="headline-medium mb-2">Chat avec Claude AI</h3>
-          <p className="body-medium" style={{ color: 'var(--grey-600)' }}>
-            Intégration de l'API Claude pour répondre à vos questions
-          </p>
-          <p className="body-small mt-3" style={{ color: 'var(--grey-500)' }}>
-            🚧 En cours de développement
-          </p>
+        {/* Message initial au centre */}
+        <div className="text-center" style={{ position: 'relative' }}>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'var(--grey-400)', fontSize: '13px' }}>
+            Discutez en toute liberté
+          </div>
         </div>
       </div>
 
@@ -59,7 +22,7 @@ const ChatPage: React.FC = () => {
         <div style={{ display: 'flex', gap: '12px' }}>
           <input
             type="text"
-            placeholder="Écrivez votre message..."
+            placeholder="Discutez..."
             disabled
             style={{
               flex: 1,
